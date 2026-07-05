@@ -6,7 +6,6 @@ const {
   SlashCommandBuilder
 } = require("discord.js");
 
-const { joinVoiceChannel } = require("@discordjs/voice");
 const { DisTube } = require("distube");
 
 const TOKEN = process.env.TOKEN;
