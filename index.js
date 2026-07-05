@@ -52,20 +52,7 @@ client.once("ready", async () => {
   );
 
   console.log("Slash commands registered!");
-
-  const channel = await client.channels.fetch(VOICE_CHANNEL_ID);
-
-  if (channel && channel.isVoiceBased()) {
-    joinVoiceChannel({
-      channelId: channel.id,
-      guildId: channel.guild.id,
-      adapterCreator: channel.guild.voiceAdapterCreator,
-      selfDeaf: true,
-      selfMute: false
-    });
-
-    console.log("Bot joined voice channel.");
-  }
+  
 });
 
 client.on("interactionCreate", async interaction => {
